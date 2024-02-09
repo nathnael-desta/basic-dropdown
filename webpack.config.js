@@ -38,11 +38,16 @@ module.exports = {
         test: /\.xml$/i,
         use: ['xml-loader'],
       },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+    },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
+      template: './src/index.ejs'
     }),
   ],
   optimization: {
