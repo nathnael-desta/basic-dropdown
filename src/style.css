@@ -51,7 +51,6 @@ body {
 
 .title {
   flex: 4;
-  
   display: flex;
 }
 
@@ -84,6 +83,7 @@ body {
   cursor: pointer;
   font-size: 1.5rem;
   transition: background-color 0.7s ease;
+  position: relative;
 }
 
 .name:hover {
@@ -91,7 +91,6 @@ body {
 }
 
 .last {
-  
   border-top-right-radius: 10px;
 }
 
@@ -135,3 +134,138 @@ body {
 .dropdown:hover .holder {
   visibility: visible;
 } 
+
+.hamburger {
+  display:flex;
+}
+
+.main {
+  display: none;
+  position: relative;
+}
+
+.mobile {
+  font-family: 'bold';
+  display: none;
+  padding:0 40px;
+  margin: 20px;
+  background-color: aliceblue;
+  height: 80px;
+  align-items: center;
+  border-radius: 10px;
+  
+
+}
+
+.mobile_menu{
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  
+}
+
+.mobile_menu:hover {
+  background-color: #68fdfd;
+}
+
+svg {
+  width: auto;
+  height: 40px;
+}
+
+.close {
+  width: auto;
+  height: 47px;
+  margin-right: 0px;
+  
+
+}
+
+.basic {
+  margin-left: 0px; 
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+.mobile_menu:hover .hidden {
+  opacity: 1;          /* this is to perload the hidden one to be ready for change*/
+}
+
+
+
+.vertical {
+  position: absolute;
+  font-family: 'bold';
+  width: 50%;
+  height: min-content;
+  background-color: aliceblue;
+  top: 80px;
+  right: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown_v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 80px;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.vertical .dropdown_v:last-child .name {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+} 
+
+.up {
+  position: absolute;
+  right: 30px;
+  display: none;
+}
+.down {
+  position: absolute;
+  right: 30px;
+}
+
+.none {
+  display: none;
+  transition: display 1s ease;
+}
+
+.holder_v {
+  width: 100%;
+}
+
+
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: none;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .mobile {
+    display: flex;
+    border-bottom-right-radius: 0;
+  }
+
+}
