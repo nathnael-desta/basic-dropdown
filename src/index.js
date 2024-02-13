@@ -15,16 +15,25 @@ mobile_menu.addEventListener('click', () => {
     vertical.classList.toggle('none')
 })
 
-dropdowns.forEach((dropdown) => {
-    dropdown.addEventListener('click',() => {
-
-    })
-})
 
 names.forEach((name) => {
     name.addEventListener('click', () => {
         let holder = name.nextElementSibling;
         holder.classList.toggle('none');
+        let svgs = name.querySelectorAll('.svg');
+
+        svgs.forEach((svg) => {
+            svg.classList.toggle('none')
+        })
+        /*
+        for (let node of name.childNodes) {
+            
+            if (node.classList.contains('svg')){
+                node.classList.toggle('none')
+            }
+            
+        }
+        */
 
     })
 })
